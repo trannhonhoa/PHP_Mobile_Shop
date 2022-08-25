@@ -11467,14 +11467,13 @@ CREATE TABLE `tbl_admin` (
   `id_admin` int NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_admin`
 --
 
-INSERT INTO `tbl_admin` (`id_admin`, `username`, `password`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+
 
 -- --------------------------------------------------------
 
@@ -11488,7 +11487,7 @@ CREATE TABLE `tbl_cart` (
   `code_customer` varchar(255) NOT NULL,
   `cart_status` int NOT NULL,
   `cart_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -11501,7 +11500,7 @@ CREATE TABLE `tbl_cart_detail` (
   `code_cart` varchar(255) NOT NULL,
   `product_id` int NOT NULL,
   `cart_quantity` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -11513,16 +11512,13 @@ CREATE TABLE `tbl_category_post` (
   `id_category_post` int NOT NULL,
   `title_category_post` varchar(255) NOT NULL,
   `desc_category_post` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_category_post`
 --
 
-INSERT INTO `tbl_category_post` (`id_category_post`, `title_category_post`, `desc_category_post`) VALUES
-(9, 'Tin Kinh Tế', 'KT'),
-(10, 'Tin Công Nghệ', 'CN'),
-(11, 'Chính Trị', 'CT');
+
 
 -- --------------------------------------------------------
 
@@ -11534,18 +11530,12 @@ CREATE TABLE `tbl_category_product` (
   `id_category_product` int NOT NULL,
   `title_category_product` varchar(255) NOT NULL,
   `desc_category_product` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_category_product`
 --
 
-INSERT INTO `tbl_category_product` (`id_category_product`, `title_category_product`, `desc_category_product`) VALUES
-(5, 'Phone', 'phone'),
-(6, 'Laptop ', 'laptop'),
-(7, 'Tai Nghe', 'tai nghe'),
-(8, 'Ốp Lưng', 'op lung'),
-(11, 'Đồng Hồ', 'ĐH');
 
 -- --------------------------------------------------------
 
@@ -11560,17 +11550,12 @@ CREATE TABLE `tbl_post` (
   `id_category_post` int NOT NULL,
   `image_post` varchar(255) NOT NULL,
   `date_post` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_post`
 --
 
-INSERT INTO `tbl_post` (`id_post`, `title_post`, `desc_post`, `id_category_post`, `image_post`, `date_post`) VALUES
-(6, 'Nga tiết lộ chức năng của trạm vũ trụ trong tương lai', '<h2>Tổng gi&aacute;m đốc tập đo&agrave;n vũ trụ Nga Roscosmos, &ocirc;ng Dmitry Rogozin ng&agrave;y 13/1 đ&atilde; c&oacute; b&agrave;i giới thiệu về Trạm dịch vụ quỹ đạo (ROSS) tương lai của Nga.</h2>\r\n\r\n<ul>\r\n	<li>\r\n	<p><a href=\"https://baotintuc.vn/the-gioi/iran-phong-ten-lua-dua-ba-thiet-bi-chua-xac-dinh-vao-vu-tru-20211230162933441.htm\">Iran ph&oacute;ng t&ecirc;n lửa đưa ba thiết bị chưa x&aacute;c định v&agrave;o vũ trụ</a></p>\r\n	</li>\r\n	<li>\r\n	<p><a href=\"https://baotintuc.vn/the-gioi/iss-sap-ngung-hoat-dong-mo-ra-ky-nguyen-cho-cuoc-dua-xay-tram-vu-tru-moi-20211227111646911.htm\">ISS sắp ngừng hoạt động, mở ra kỷ nguy&ecirc;n cho cuộc đua x&acirc;y trạm vũ trụ mới</a></p>\r\n	</li>\r\n	<li>\r\n	<p><a href=\"https://baotintuc.vn/the-gioi/nasa-phong-kinh-vien-vong-10-ti-usd-tim-hieu-bi-mat-cua-vu-tru-20211225130505413.htm\">NASA ph&oacute;ng k&iacute;nh viễn vọng 10 tỉ USD, t&igrave;m hiểu b&iacute; mật của vũ trụ</a></p>\r\n	</li>\r\n</ul>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><img alt=\"Chú thích ảnh\" src=\"https://cdnmedia.baotintuc.vn/Upload/YZmStSDTjb0M07hFJ2gA/files/2022/01/10/tram-vu-tru-130122.jpg\" /></p>\r\n\r\n<p>Trạm vũ trụ quốc tế ISS. Ảnh minh họa: AFP/TTXVN</p>\r\n\r\n<p>Cụ thể, những ưu thế của ROSS l&agrave; kiến tr&uacute;c modul c&oacute; thể biến đổi, c&oacute; thời gian phục vụ d&agrave;i hơn, hoạt động v&igrave; lợi &iacute;ch quốc ph&ograve;ng v&agrave; an ninh, sử dụng để lắp r&aacute;p một hệ thống th&aacute;m hiểm li&ecirc;n h&agrave;nh tinh. Trạm n&agrave;y cũng sẽ sử dụng để bảo quản v&agrave; bảo dưỡng c&aacute;c thiết bị vũ trụ. Ngo&agrave;i ra trạm c&ograve;n c&oacute; một ph&ograve;ng th&iacute; nghiệm khoa học độc lập v&agrave; c&oacute; khả năng t&aacute;i định dạng.</p>\r\n\r\n<p>Li&ecirc;n quan đến&nbsp;Trạm vũ trụ quốc tế (ISS), trong năm 2022, c&aacute;c phi h&agrave;nh gia tr&ecirc;n ISS sẽ tiến h&agrave;nh nghi&ecirc;n cứu để tạo ra thuốc kh&aacute;ng virus, cụ thể l&agrave; chế tạo c&aacute;c loại thuốc chống l&acirc;y nhiễm virus SARS-CoV-2.</p>\r\n\r\n<p>&Ocirc;ng Rogozin cũng lưu &yacute; rằng Roscosmos v&agrave; NASA đang tham vấn về việc k&eacute;o d&agrave;i hoạt động của ISS đến năm 2030. Theo &ocirc;ng, Nga đ&atilde; đạt được một thỏa thuận với NASA về việc hỗ trợ kỹ thuật cho modul Zarya cho đến năm 2024. Roscosmos v&agrave; NASA, phối hợp với Bộ Ngoại giao Nga, đ&atilde; soạn thảo thỏa thuận về c&aacute;c chuyến bay ch&eacute;o - c&aacute;c phi h&agrave;nh gia Mỹ bay tr&ecirc;n t&agrave;u vũ trụ Soyuz của Nga v&agrave; c&aacute;c phi h&agrave;nh gia Nga tr&ecirc;n t&agrave;u Mỹ.</p>\r\n', 10, '16420776124dcdbd320870e12eb861.jpg', '2022-01-13 19:41:58'),
-(8, 'Thủ tướng chỉ đạo lập ngay nhóm công tác giải quyết ách tắc tại cửa khẩu', '<p>hủ tướng Phạm Minh Ch&iacute;nh chỉ đạo: Bộ C&ocirc;ng Thương chủ tr&igrave;, phối hợp với c&aacute;c bộ, cơ quan v&agrave; 7 tỉnh bi&ecirc;n giới tiếp gi&aacute;p với Trung Quốc khẩn trương th&agrave;nh lập nh&oacute;m giải quyết &aacute;ch tắc h&agrave;ng h&oacute;a tại cửa khẩu.</p>\r\n\r\n<p><a href=\"https://vietnamnet.vn/vn/thoi-su/chinh-tri/phan-dau-truoc-tet-nguyen-dan-khong-con-xe-un-tac-tai-cac-cua-khau-807473.html\">Phấn đấu trước Tết Nguy&ecirc;n đ&aacute;n kh&ocirc;ng c&ograve;n xe &ugrave;n tắc tại c&aacute;c cửa khẩu</a></p>\r\n\r\n<p><a href=\"https://vietnamnet.vn/vn/thoi-su/hang-ngan-container-un-u-lang-son-de-nghi-dung-dua-hang-xuat-khau-len-vung-bien-806637.html\">H&agrave;ng ng&agrave;n container &ugrave;n ứ, Lạng Sơn đề nghị dừng đưa h&agrave;ng xuất khẩu l&ecirc;n v&ugrave;ng bi&ecirc;n</a></p>\r\n\r\n<p><a href=\"https://vietnamnet.vn/vn/thoi-su/chinh-tri/pho-thu-tuong-yeu-cau-khan-truong-khac-phuc-un-tac-hang-hoa-tai-cua-khau-806233.html\">Ph&oacute; Thủ tướng y&ecirc;u cầu khẩn trương khắc phục &ugrave;n tắc h&agrave;ng h&oacute;a tại cửa khẩu</a></p>\r\n\r\n<p>Ngay sau cuộc điện đ&agrave;m ng&agrave;y 13/1 với Thủ tướng Trung Quốc L&yacute; Khắc Cường, Thủ tướng Phạm Minh Ch&iacute;nh c&oacute; &yacute; kiến chỉ đạo như sau: Bộ C&ocirc;ng Thương chủ tr&igrave;, phối hợp với c&aacute;c bộ, cơ quan v&agrave; 7 tỉnh bi&ecirc;n giới tiếp gi&aacute;p với Trung Quốc khẩn trương th&agrave;nh lập nh&oacute;m c&ocirc;ng t&aacute;c.</p>\r\n\r\n<p>Nh&oacute;m do Thứ trưởng Bộ C&ocirc;ng Thương l&agrave;m tổ trưởng, c&ugrave;ng l&atilde;nh đạo c&aacute;c bộ, cơ quan, UBND c&aacute;c tỉnh: Điện Bi&ecirc;n, Lai Ch&acirc;u, L&agrave;o Cai, H&agrave; Giang, Cao Bằng, Lạng Sơn, Quảng Ninh phối hợp với ph&iacute;a Trung Quốc tiếp tục giải quyết vấn đề &aacute;ch tắc h&agrave;ng h&oacute;a tại cửa khẩu bi&ecirc;n giới, n&acirc;ng cao hiệu suất th&ocirc;ng quan,<a href=\"https://vietnamnet.vn/nong-san-un-tac-tai-cua-khau-tag239039.html\" target=\"_blank\">&nbsp;lưu th&ocirc;ng h&agrave;ng h&oacute;a ở cửa khẩu</a>&nbsp;bi&ecirc;n giới, duy tr&igrave; thương mại th&ocirc;ng suốt giữa hai nước, đặc biệt trong dịp Tết Nguy&ecirc;n đ&aacute;n, đảm bảo kiểm so&aacute;t dịch bệnh hiệu quả, khoa học, an to&agrave;n.</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<td><a href=\"https://vnn-imgs-f.vgcloud.vn/2022/01/13/19/mit-thai-4.jpg\"><img alt=\"Thủ tướng chỉ đạo lập ngay nhóm công tác giải quyết ách tắc tại cửa khẩu\" src=\"https://vnn-imgs-f.vgcloud.vn/2022/01/13/19/mit-thai-4.jpg\" /></a></td>\r\n		</tr>\r\n		<tr>\r\n			<td>N&ocirc;ng sản Việt được b&agrave;y b&aacute;n tr&ecirc;n vỉa h&egrave;. Ảnh: Phạm Hải</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>Trong cuộc điện đ&agrave;m s&aacute;ng nay với Thủ tướng Trung Quốc L&yacute; Khắc Cường,&nbsp;Thủ tướng Phạm Minh Ch&iacute;nh đề nghị ph&iacute;a Trung Quốc tiếp tục mở rộng nhập khẩu h&agrave;ng h&oacute;a v&agrave; đẩy nhanh mở cửa thị trường đối với một số loại n&ocirc;ng sản, hoa quả của Việt Nam.</p>\r\n\r\n<p>Việt Nam đang quyết liệt thực hiện phương ch&acirc;m &ldquo;an to&agrave;n để xuất khẩu, xuất khẩu phải an to&agrave;n&rdquo;.</p>\r\n\r\n<p>Thủ tướng L&yacute; Khắc Cường nhấn mạnh coi trọng v&agrave; quan t&acirc;m những đề nghị của Việt Nam về hợp t&aacute;c kinh tế, thương mại v&agrave; đầu tư, coi đ&acirc;y l&agrave; lĩnh vực quan trọng trong hợp t&aacute;c hai b&ecirc;n.</p>\r\n\r\n<p>Sau khi Thủ tướng Phạm Minh Ch&iacute;nh c&oacute; thư gửi Thủ tướng L&yacute; Khắc Cường v&agrave; gặp Đại sứ Trung Quốc tại Việt Nam, Thủ tướng L&yacute; Khắc Cường đ&atilde; chỉ đạo c&aacute;c bộ ng&agrave;nh, địa phương Trung Quốc phối hợp giải quyết, đến nay t&igrave;nh h&igrave;nh giao thương h&agrave;ng h&oacute;a tại cửa khẩu đ&atilde; c&oacute; cải thiện.</p>\r\n\r\n<p>Đề nghị hai b&ecirc;n lập nh&oacute;m c&ocirc;ng t&aacute;c chung tiếp tục phối hợp giải quyết vấn đề n&agrave;y, tạo điều kiện thuận lợi để c&aacute;c mặt h&agrave;ng n&ocirc;ng sản, hoa quả của Việt Nam xuất khẩu sang Trung Quốc v&agrave; duy tr&igrave; thương mại th&ocirc;ng suốt giữa hai nước.</p>\r\n', 11, '1642146562mit-thai-4.jpg', '2022-01-14 14:50:54'),
-(9, 'Nguồn cung căn hộ thấp nhất 6 năm', '<p>TP HCM12 th&aacute;ng qua, th&agrave;nh phố c&oacute; 19 dự &aacute;n với 14.339 căn hộ ch&agrave;o b&aacute;n, giảm 22% theo năm v&agrave; chạm đ&aacute;y 6 năm qua.</p>\r\n\r\n<p>Nội dung tr&ecirc;n được n&ecirc;u trong b&aacute;o c&aacute;o tổng kết thị trường căn hộ năm 2021 của CBRE Việt Nam vừa c&ocirc;ng bố. Nguy&ecirc;n nh&acirc;n nguồn cung li&ecirc;n tục lao dốc l&agrave; do t&aacute;c động của việc cấp ph&eacute;p dự &aacute;n chậm trong một v&agrave;i năm gần đ&acirc;y v&agrave; ảnh hưởng nặng nề của đợt phong tỏa ph&ograve;ng dịch giữa năm 2021 (qu&yacute; II v&agrave; III).</p>\r\n\r\n<p>Sau 9 th&aacute;ng đầu năm chịu ảnh hưởng ti&ecirc;u cực từ đợt dịch Covid-19 lần thứ tư, thị trường căn hộ tại TP HCM đ&atilde; c&oacute; dấu hiệu dần phục hồi trong m&ugrave;a cao điểm b&aacute;n h&agrave;ng cuối năm. Nguồn cung mới trong qu&yacute; IV/2021 đ&oacute;ng g&oacute;p 48% tổng nguồn cung mới cả năm. Lượng căn hộ ch&agrave;o b&aacute;n th&agrave;nh c&ocirc;ng trong năm qua đạt 14.639 căn (bao gồm cả nguồn cung mới lẫn h&agrave;ng tồn), giảm 7% so với c&ugrave;ng kỳ năm trước.</p>\r\n\r\n<p><img alt=\"Dữ liệu của CBRE về nguồn cung dự án căn hộ TP HCM năm 2021 xuống thấp nhất kể từ năm 2015, rổ hàng chỉ nhỉnh hơn giai đoạn thị trường bất động sản khủng hoảng 2011-2013. Ảnh chụp màn hình\" src=\"https://i1-kinhdoanh.vnecdn.net/2022/01/14/Residental-2021-report-CBRE-4865-1642132191.jpg?w=680&amp;h=0&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=DN4N_d9x8ZtGXXkSYiaO0Q\" /></p>\r\n\r\n<p>Dữ liệu của CBRE về nguồn cung dự &aacute;n căn hộ TP HCM năm 2021 xuống thấp nhất kể từ năm 2015, rổ h&agrave;ng chỉ nhỉnh hơn giai đoạn thị trường bất động sản khủng hoảng 2011-2013.</p>\r\n\r\n<p>Chung cư cao cấp dẫn đầu nguồn cung to&agrave;n thị trường trong năm qua khi chiếm đến 59% rổ h&agrave;ng mới, căn hộ trung cấp v&agrave; hạng sang c&oacute; tỷ trọng lần lượt l&agrave; 30% v&agrave; 10%. Trong khi ph&acirc;n kh&uacute;c b&igrave;nh d&acirc;n tiếp tục kh&ocirc;ng c&oacute; nguồn cung mới năm thứ hai li&ecirc;n tiếp. Khu Đ&ocirc;ng trở th&agrave;nh thủ phủ của nh&agrave; gi&aacute; cao khi ghi nhận đến 8 dự &aacute;n hạng sang v&agrave; cao cấp ra mắt, chiếm 52% nguồn cung mới. C&aacute;c khu vực ph&iacute;a T&acirc;y v&agrave; ph&iacute;a Nam với thị phần lần lượt l&agrave; 22% v&agrave; 17% giữ hai vị tr&iacute; tiếp theo. Ph&iacute;a Bắc v&agrave; khu Trung t&acirc;m, mỗi nơi ghi nhận một đợt mở b&aacute;n mới.</p>\r\n\r\n<p>Đơn vị khảo s&aacute;t n&agrave;y đ&atilde; bổ sung th&ecirc;m ph&acirc;n kh&uacute;c si&ecirc;u sang b&ecirc;n cạnh ph&acirc;n kh&uacute;c hạng sang v&agrave;o c&aacute;c ti&ecirc;u ch&iacute; ph&acirc;n loại. Theo đ&oacute;, dự &aacute;n si&ecirc;u sang được định nghĩa l&agrave; tất cả dự &aacute;n c&oacute; mức gi&aacute; sơ cấp từ 12.000 USD một m2 trở l&ecirc;n. Thị trường căn hộ năm qua ghi nhận dự &aacute;n si&ecirc;u sang đầu ti&ecirc;n thuộc d&ograve;ng sản phẩm căn hộ c&oacute; thương hiệu với mức gi&aacute; tr&ecirc;n 15.000 USD một m2, b&agrave;n giao ho&agrave;n thiện theo ti&ecirc;u chuẩn quốc tế, c&oacute; nhiều tiện &iacute;ch cao cấp v&agrave; được quản l&yacute; vận h&agrave;nh bởi thương hiệu kh&aacute;ch sạn chuy&ecirc;n nghiệp. Loại h&igrave;nh căn hộ h&agrave;ng hiệu n&agrave;y dự kiến ra mắt nhiều dự &aacute;n mới trong thời gian tới.</p>\r\n\r\n<p><img alt=\"Thị trường bất động sản khu đông TP HCM. Ảnh: Quỳnh Trần\" src=\"https://i1-kinhdoanh.vnecdn.net/2022/01/14/batdongsan-1-5592-1642132191.jpg?w=680&amp;h=0&amp;q=100&amp;dpr=1&amp;fit=crop&amp;s=KkerjRniYDLkuw-iZDpURg\" /></p>\r\n\r\n<p>Thị trường bất động sản khu đ&ocirc;ng TP HCM. Ảnh:&nbsp;<em>Quỳnh Trần</em></p>\r\n\r\n<p>Gi&aacute; b&aacute;n b&igrave;nh qu&acirc;n của căn hộ tr&ecirc;n thị trường sơ cấp tăng 6,9% so với c&ugrave;ng kỳ l&ecirc;n mức 2.306 USD một m2 (chưa bao gồm thuế gi&aacute; trị gia tăng) nhờ nguồn cung mới từ c&aacute;c ph&acirc;n kh&uacute;c cao cấp trở l&ecirc;n. B&igrave;nh qu&acirc;n gi&aacute; ch&agrave;o b&aacute;n căn hộ si&ecirc;u sang đạt 15.375 USD một m2, đến từ một dự &aacute;n căn hộ h&agrave;ng hiệu. Trừ ph&acirc;n kh&uacute;c hạng sang, ba ph&acirc;n kh&uacute;c c&ograve;n lại ghi nhận mức tăng gi&aacute; nhẹ. Ph&acirc;n kh&uacute;c trung cấp c&oacute; tốc độ tăng gi&aacute; cao nhất l&agrave; 4,2% so với c&ugrave;ng kỳ năm ngo&aacute;i trong khi cao cấp v&agrave; b&igrave;nh d&acirc;n tăng khoảng 2%.</p>\r\n\r\n<p>Khu vực ngoại th&agrave;nh như quận B&igrave;nh T&acirc;n, B&igrave;nh Ch&aacute;nh, Thủ Đức c&oacute; xu hướng n&acirc;ng cấp từ ph&acirc;n kh&uacute;c trung cấp l&ecirc;n cao cấp. Đối với ph&acirc;n kh&uacute;c hạng sang, lượng mở b&aacute;n mới tăng ở khu vực ngo&agrave;i trung t&acirc;m bao gồm c&aacute;c phường An Ph&uacute;, Thảo Điền, Thạnh Mỹ Lợi với mức gi&aacute; thấp hơn so với khu vực truyền thống của ph&acirc;n kh&uacute;c n&agrave;y (khu vực Thủ Thi&ecirc;m v&agrave; quận 1) khiến gi&aacute; giảm 4,4% theo năm.</p>\r\n\r\n<p>Từ cuối qu&yacute; IV/2021, nhiều dự &aacute;n đ&atilde; bắt đầu nhận đặt chỗ cho đợt mở b&aacute;n đầu năm 2022, gi&aacute; b&aacute;n sơ cấp dự kiến vẫn tiếp tục tăng. Trong 12 th&aacute;ng tới, thị trường kỳ vọng ch&agrave;o đ&oacute;n gần 22.000 căn hộ mới đến từ giai đoạn tiếp theo của c&aacute;c dự &aacute;n hiện hữu. Nguồn cung giảm, gi&aacute; nh&agrave; vẫn neo cao v&agrave; quỹ đất khu vực nội th&agrave;nh TP HCM hạn chế đang khiến thị trường nh&agrave; ở dịch chuyển ra c&aacute;c khu vực l&acirc;n cận như B&igrave;nh Dương, Đồng Nai v&agrave; Long An.</p>\r\n\r\n<p>B&agrave; Dương Th&ugrave;y Dung, Gi&aacute;m đốc cấp cao CBRE Việt Nam cho biết, thị hiếu v&agrave; khẩu vị nh&agrave; ở của kh&aacute;ch h&agrave;ng li&ecirc;n tục thay đổi do t&aacute;c động của đại dịch đang ph&acirc;n h&oacute;a thị trường mạnh mẽ.</p>\r\n\r\n<p>Theo b&agrave;, c&aacute;c căn hộ c&oacute; đặc t&iacute;nh ho&agrave;n to&agrave;n mới như c&ocirc;ng nghệ, xu hướng nghỉ dưỡng tại gia (staycation) đang xuất hiện tại nhiều dự &aacute;n mới. Thị trường căn hộ ở c&aacute;c đ&ocirc; thị lớn như TP HCM đang ghi nhận sự quan t&acirc;m ng&agrave;y c&agrave;ng tăng từ những người trẻ thuộc thế hệ Y (Millennial) những người sinh ra trong giai đoạn 1981-1996 v&agrave; thế hệ Z (kế tiếp thế hệ Y) sinh ra giai đoạn 1997-2012. Đ&acirc;y l&agrave; tệp kh&aacute;ch h&agrave;ng đang v&agrave; sẽ l&agrave; lực lượng ti&ecirc;u d&ugrave;ng chủ lực mua căn hộ trong tương lai.</p>\r\n\r\n<ul>\r\n	<li><a href=\"https://vnexpress.net/nguon-cung-nha-o-giam-gan-60-4172782.html\">Nguồn cung nh&agrave; ở giảm gần 60%</a></li>\r\n	<li><a href=\"https://vnexpress.net/nguon-cung-can-ho-cao-cap-tang-hon-120-4302459.html\">Nguồn cung căn hộ cao cấp tăng hơn 120%</a></li>\r\n	<li><a href=\"https://vnexpress.net/nguon-cung-can-ho-hang-sang-dang-phinh-to-4262157.html\">Nguồn cung căn hộ hạng sang đang ph&igrave;nh to</a><a href=\"https://vnexpress.net/nguon-cung-can-ho-hang-sang-dang-phinh-to-4262157.html#box_comment_vne\">&nbsp;30</a></li>\r\n	<li><a href=\"https://vnexpress.net/mot-nam-gia-nha-tang-nguoc-chieu-nen-kinh-te-4409169.html\">Một năm gi&aacute; nh&agrave; tăng ngược chiều nền kinh tế</a><a href=\"https://vnexpress.net/mot-nam-gia-nha-tang-nguoc-chieu-nen-kinh-te-4409169.html#box_comment_vne\">&nbsp;72</a></li>\r\n	<li><a href=\"https://vnexpress.net/hai-kich-ban-thi-truong-can-ho-cuoi-nam-4358340.html\">Hai kịch bản thị trường căn hộ cuối năm</a><a href=\"https://vnexpress.net/hai-kich-ban-thi-truong-can-ho-cuoi-nam-4358340.html#box_comment_vne\">&nbsp;53</a></li>\r\n</ul>\r\n', 9, '1642146733batdongsan-1-5592-1642132191.jpg', '2022-01-14 14:52:42'),
-(10, 'Giá vé trận ĐT Việt Nam vs Trung Quốc không đổi: Cao nhất 1,2 triệu đồng', '<p>Gi&aacute; v&agrave; phương thức ph&aacute;t h&agrave;nh v&eacute; trận đấu giữa ĐT Việt Nam vs Trung Quốc sẽ kh&ocirc;ng c&oacute; thay đổi so với c&aacute;c trận đấu thuộc v&ograve;ng loại World Cup 2022 được tổ chức tại s&acirc;n Mỹ Đ&igrave;nh trước đ&acirc;y.</p>\r\n\r\n<ul>\r\n	<li><a href=\"https://tintuc.vn/9-tuyen-thu-nu-viet-nam-mac-covid-19-post2211741?utm_source=tintuc_pc&amp;utm_medium=content_ads_header\">9 tuyển thủ nữ Việt Nam mắc Covid-19</a></li>\r\n	<li><a href=\"https://tintuc.vn/tran-viet-nam-tai-dau-trung-quoc-hai-van-khan-gia-duoc-vao-san-my-dinh-co-vu-post2211755?utm_source=tintuc_pc&amp;utm_medium=content_ads_header\">Trận Việt Nam t&aacute;i đấu Trung Quốc: Hai vạn kh&aacute;n giả được v&agrave;o s&acirc;n Mỹ Đ&igrave;nh cổ vũ</a></li>\r\n</ul>\r\n\r\n<p><img alt=\"Các CĐV có dịp đón Tết cùng ĐT Việt Nam\" src=\"https://static.tintuc.com.vn/images/ver3/2022/01/14/1642133739249-gia-ve.jpg\" /></p>\r\n\r\n<p>C&aacute;c CĐV c&oacute; dịp đ&oacute;n Tết c&ugrave;ng ĐT Việt Nam.</p>\r\n\r\n<p>Cụ thể, trận đấu giữa ĐT Việt Nam vs Trung Quốc (2/1/2022, tức m&ugrave;ng 1 Tết Nguy&ecirc;n đ&aacute;n) c&oacute; 4 mệnh gi&aacute; v&eacute;: 1,2 triệu đồng/v&eacute;, 900.000 đồng, 700.000 đồng v&agrave; 500.000 đồng. Đ&acirc;y l&agrave; mức gi&aacute; đ&atilde; được &aacute;p dụng cho hai trận đấu gặp Nhật Bản v&agrave; Saudi Arabia (Ả Rập X&ecirc; &Uacute;t) trước đ&oacute;.</p>\r\n\r\n<p>Dự kiến, v&eacute; được mở b&aacute;n v&agrave;o ng&agrave;y 18/1 qua k&ecirc;nh online, v&eacute; được trả qua đường bưu điện như th&ocirc;ng lệ.</p>\r\n\r\n<p>Mới đ&acirc;y, TP. H&agrave; Nội đ&atilde; đồng &yacute; với đề xuất cho ph&eacute;p s&acirc;n Mỹ Đ&igrave;nh đ&oacute;n kh&aacute;n giả với số lượng 20.000 người, tương đương với 50% sức chứa. Trong bối cảnh dịch bệnh diễn biến phức tạp, c&aacute;c b&ecirc;n li&ecirc;n quan sẽ phải l&agrave;m việc rất kỹ để c&oacute; phương &aacute;n tổ chức trận đấu an to&agrave;n, tr&aacute;nh những trường hợp ph&aacute;t sinh đ&aacute;ng tiếc.</p>\r\n\r\n<p>Cũng giống như hai trận đấu trước, h&agrave;ng ngh&igrave;n chiến sĩ c&ocirc;ng an, nh&acirc;n vi&ecirc;n an ninh cũng được huy động. Ban tổ chức sẽ bố tr&iacute; th&agrave;nh 3 v&ograve;ng để kiểm so&aacute;t kh&aacute;n giả, đảm bảo kh&ocirc;ng c&oacute; trường hợp d&ugrave;ng v&eacute; giả, v&eacute; lậu, chỉ c&oacute; những người đủ điều kiện sức khỏe mới được v&agrave;o s&acirc;n cổ vũ.</p>\r\n\r\n<ul>\r\n	<li><a href=\"https://tintuc.vn/hung-dung-thay-que-ngoc-hai-lam-doi-truong-doi-tuyen-viet-nam-post2211759?utm_source=tintuc_pc&amp;utm_medium=content_ads_footer\">H&ugrave;ng Dũng thay Quế Ngọc Hải l&agrave;m đội trưởng đội tuyển Việt Nam</a></li>\r\n	<li><a href=\"https://tintuc.vn/nhan-su-tuyen-viet-nam-khong-phai-kho-khan-qua-lon-post2211774?utm_source=tintuc_pc&amp;utm_medium=content_ads_footer\">Nh&acirc;n sự tuyển Việt Nam kh&ocirc;ng phải kh&oacute; khăn qu&aacute; lớn</a></li>\r\n</ul>\r\n', 11, '16421472911642133739249-gia-ve.jpg', '2022-01-14 15:01:31');
 
 -- --------------------------------------------------------
 
@@ -11587,21 +11572,12 @@ CREATE TABLE `tbl_product` (
   `image_product` varchar(255) NOT NULL,
   `id_category_product` int NOT NULL,
   `product_hot` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_product`
 --
 
-INSERT INTO `tbl_product` (`id_product`, `title_product`, `desc_product`, `price_product`, `quantity_product`, `image_product`, `id_category_product`, `product_hot`) VALUES
-(9, 'Tai Nghe Thor', '<p>Pin 200 mah</p>\r\n\r\n<p>Nhựa dẻo</p>\r\n\r\n<p>Bass &ecirc;m</p>\r\n', '500000', 5, '1642075095tải xuống (3).jpg', 7, 1),
-(10, 'Laptop Dell', '<p>Core i5 8500U</p>\r\n\r\n<p>Ram 8GB</p>\r\n\r\n<p>Rom 1TB</p>\r\n\r\n<p>&nbsp;</p>\r\n', '19999990', 10, '1642041151tải xuống (8).jpg', 6, 1),
-(11, 'Ốp lưng samsung', 'Nhựa dẻo', '25699', 20, '1642041187tải xuống (6).jpg', 8, 1),
-(12, 'Điện thoại samsung A70', 'Rom 512GB', '12888999', 5, '1642041234tải xuống.jpg', 5, 1),
-(13, 'Laptop Gaming', '<p>Core i9 7700k</p>\r\n\r\n<p>Ram 32GB</p>\r\n\r\n<p>Rom 2TB SSD Sata 3</p>\r\n\r\n<p>Pin 4000 mah</p>\r\n', '25000000', 5, '1644196789gaming.jpg', 6, 1),
-(14, 'Iphone 13 Promax', '<p>Ram 4GB</p>\r\n\r\n<p>Rom 1TB</p>\r\n\r\n<p>Pin 6000 mah</p>\r\n\r\n<p>Camera 48 MPX</p>\r\n', '35000000', 10, '1645017914iphone-13-pro-max-gold-1-600x600.jpg', 5, 0),
-(15, 'SamSung A52', '<p>Ram 3GB</p>\r\n\r\n<p>Rom 512GB</p>\r\n\r\n<p>Pin 6500 mah</p>\r\n\r\n<p>Full HD+</p>\r\n', '10900000', 15, '1645018002samsung-galaxy-a52s-5g-mint-600x600.jpg', 5, 0),
-(16, 'ViVo v15', '<p>Ram 2GB</p>\r\n\r\n<p>Rom 64GB</p>\r\n\r\n<p>Pin 3000 mah</p>\r\n\r\n<p>Camera 12 MPX</p>\r\n', '3000000', 10, '1645018089Vivo-y15A-trang-xanh-600x600.jpg', 5, 0);
 
 -- --------------------------------------------------------
 
@@ -11615,15 +11591,13 @@ CREATE TABLE `tbl_thongke` (
   `donhang` int NOT NULL,
   `soluong` int NOT NULL,
   `doanhthu` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_thongke`
 --
 
-INSERT INTO `tbl_thongke` (`id`, `ngaydat`, `donhang`, `soluong`, `doanhthu`) VALUES
-(8, '2022-01-15', 3, 8, '74414668'),
-(9, '2022-02-16', 2, 7, '61525669');
+
 
 -- --------------------------------------------------------
 
@@ -11639,14 +11613,12 @@ CREATE TABLE `tbl_user` (
   `email_customer` varchar(100) NOT NULL,
   `password_customer` varchar(255) NOT NULL,
   `code_customer` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`id_customer`, `name_customer`, `phone_customer`, `address_customer`, `email_customer`, `password_customer`, `code_customer`) VALUES
-(16, 'Tran Nhon Hoa', '0912605156', 'Tỉnh Quảng Ninh, Huyện Vân Đồn, Xã Thắng Lợi', 'admin@gmail.com', '21232f297a57a5a743894a0e4a801fc3', '7ab2d6a582d9a19203317ca68c585715');
 
 --
 -- Indexes for dumped tables

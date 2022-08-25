@@ -147,9 +147,11 @@ class cart extends DController
             $user_mail = "user@gmail.com";
             $mail->ordermail($title, $content, $user_mail);
             unset($_SESSION['cart']);
-            header("Location: ".BASE_URL.'/cart/success');
+            // header("Location: " . BASE_URL . "/cart");
+            
           
         }
+        header("Location: ".BASE_URL.'/cart/success');
     }
     public function success(){
         $this->load->view("header");
